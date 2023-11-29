@@ -31,8 +31,6 @@ class Game:
 
     def gameStart(self):
         run = "go"
-        while run == "go":
-            self.showQuestion(self.questionDict["1"][0], self.questionDict["1"][1], self.questionDict["1"][2])
 
 
 
