@@ -1,8 +1,8 @@
 class Game:
-    
-    questionDict = {
-        "Welcome to the game! Thing of a design pattern and answer these yes/no questions! Ready?":["does it provide an object creation mechanism that enhances the flexibilities of the existing code?", "stop"],
-        }
+
+    def buildDictionary(self):
+        questionDict = {}
+        return questionDict
 
     def answerYes(self, nextQuestion):
         self.showQuestion(nextQuestion, "1", "2")
@@ -32,8 +32,7 @@ class Game:
     def gameStart(self):
         run = "go"
         while run == "go":
-            self.showQuestion("Welcome to the game! Thing of a design pattern and answer these yes/no questions! Ready?", "does", "stop")
-
+            self.showQuestion(self.questionDict["1"][0], self.questionDict["1"][1], self.questionDict["1"][2])
 
 
 
