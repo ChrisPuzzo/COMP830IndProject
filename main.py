@@ -1,12 +1,17 @@
 class Game:
     
-    questionDict = {}
+    questionDict = {
+        "Welcome to the game! Thing of a design pattern and answer these yes/no questions! Ready?":["does it provide an object creation mechanism that enhances the flexibilities of the existing code?", "stop"],
+        }
 
     def answerYes(self, nextQuestion):
-        pass
+        self.showQuestion(nextQuestion, "1", "2")
 
     def answerNo(self, nextQuestion):
-        pass
+        self.showQuestion(nextQuestion, "1,", "2")
+
+    def stopGame(self):
+        exit()
 
     def showQuestion(self, question, nextY, nextN):
         print(question, "\n")
@@ -16,13 +21,20 @@ class Game:
             self.answerYes(nextY)
             
         if ans == "2":
-            self.answerNo(nextN)
+            if nextN == "stop":
+                self.stopGame()
+            else:    
+                self.answerNo(nextN)
         
         else:
-            print("Please type either 1 or 2")                    
+            self.showQuestion(question, nextY, nextN)                   
 
-    def gameStart():
-        print("the game has started")
+    def gameStart(self):
+        run = "go"
+        while run == "go":
+            self.showQuestion("Welcome to the game! Thing of a design pattern and answer these yes/no questions! Ready?", "does", "stop")
+
+
 
 
 
