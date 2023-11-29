@@ -1,11 +1,6 @@
-
-from ast import main
-
-
 class Game:
     
-    questionsDict = {}
-
+    questionDict = {}
 
     def answerYes(self, nextQuestion):
         pass
@@ -14,15 +9,15 @@ class Game:
         pass
 
     def showQuestion(self, question, nextY, nextN):
-        print(question "\n")
+        print(question, "\n")
         print("(1)Yes or (2)No?: ")
         ans = input()
         if ans == "1":
             self.answerYes(nextY)
-
+            
         if ans == "2":
             self.answerNo(nextN)
-
+        
         else:
             print("Please type either 1 or 2")                    
 
