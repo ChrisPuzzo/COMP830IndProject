@@ -36,7 +36,7 @@ class Game:
         quesText = question[0]
         ansYes = question[1]
         ansNo = question[2]
-        print(quesText+"\n"+ansYes+"\n"+ansNo+"\n")
+        print(quesText)
         print("(1)Yes or (2)No?: ")
         ans = str(input())
         if ans == "1":
